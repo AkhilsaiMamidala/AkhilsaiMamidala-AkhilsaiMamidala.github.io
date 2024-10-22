@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design settings -->
+    <title>Train Seat Booking System</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS stylesheet -->
+</head>
+<body>
+    <div class="container"> <!-- Main container for the booking system layout -->
+        
+        <!-- Left container for controls and summary -->
+        <div class="left-container">
+            <h1>Train Seat Booking System</h1> <!-- Main heading of the page -->
+            
+            <div class="controls"> <!-- Controls for booking seats -->
+                <label for="seatsToBook">Enter number of seats to book (1-7):</label> <!-- Label for the input field -->
+                <input type="number" id="seatsToBook" min="1" max="7"> <!-- Input field for the number of seats -->
+                <button id="bookButton">Book Seats</button> <!-- Button to trigger the booking process -->
+                <button id="resetButton">Reset Seats</button> <!-- Button to reset the seat bookings -->
+            </div>
+
+            <div class="summary"> <!-- Summary section to display booked and available seats -->
+                <p id="bookedSeats">Booked Seats = 0</p> <!-- Paragraph to show the number of booked seats -->
+                <p id="availableSeats">Available Seats = 80</p> <!-- Paragraph to show the number of available seats -->
+            </div>
+        </div>
+
+        <!-- Right container for seat grid -->
+        <div class="right-container">
+            <h2>Seat Layout</h2> <!-- Subheading for the seat layout section -->
+            <div class="seat-grid"></div> <!-- Div to hold the dynamically generated seat grid -->
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to the external JavaScript file -->
+</body>
+</html>

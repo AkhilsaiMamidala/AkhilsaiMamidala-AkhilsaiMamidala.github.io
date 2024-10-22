@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex; /* Use flexbox to align left and right containers */
+    background-color: #f4f4f4; /* Background color for the overall container */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Add padding inside the main container */
+}
+
+.left-container, .right-container {
+    background-color: #fff; /* Background color for each box */
+    padding: 20px; /* Add padding inside the boxes */
+    border-radius: 8px; /* Rounded corners for boxes */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+    margin-right: 20px; /* Space between left and right containers */
+}
+
+.left-container {
+    width: 300px; /* Set width for left container */
+}
+
+.right-container {
+    flex: 1; /* Allow right container to take the remaining space */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center; /* Center the title */
+}
+
+.controls {
+    display: flex; /* Use flexbox for controls */
+    flex-direction: column; /* Stack controls vertically */
+    align-items: center; /* Center align the controls */
+    margin-bottom: 20px; /* Space below controls */
+}
+
+.controls label {
+    margin-bottom: 10px; /* Space below label */
+    font-weight: bold;
+    text-align: center; /* Center the label */
+}
+
+.controls input {
+    width: 70px; /* Set width for input */
+    text-align: center; /* Center text inside input */
+    padding: 5px;
+    margin-bottom: 10px; /* Space below input */
+}
+
+.controls button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Space below buttons */
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+.summary {
+    font-size: 18px;
+    text-align: center; /* Center align summary text */
+}
+
+#bookedSeats, #availableSeats {
+    margin-bottom: 10px;
+}
+
+.seat-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 40px); /* 7 seats per row */
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+.seat.available {
+    background-color: #77dd77; /* Green for available seats */
+    cursor: pointer;
+}
+
+.seat.booked {
+    background-color: #ff6961; /* Red for booked seats */
+    cursor: not-allowed;
+}
+
+@media (max-width: 500px) {
+    .container {
+        flex-direction: column; /* Stack boxes on smaller screens */
+    }
+
+    .left-container, .right-container {
+        width: 100%; /* Full width for smaller screens */
+        margin-right: 0; /* Remove the right margin */
+        margin-bottom: 20px; /* Add space below each box */
+    }
+
+    .seat-grid {
+        grid-template-columns: repeat(7, 30px); /* Adjust grid for smaller screens */
+        gap: 5px;
+    }
+
+    .seat {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .controls input {
+        width: 40px;
+    }
+}
+.controls {
+    display: flex; /* Use flexbox for controls */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Space out elements evenly */
+    margin-bottom: 20px; /* Space below controls */
+}
+
+.controls label {
+    margin-right: 10px; /* Space between label and input */
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.controls input {
+    width: 70px; /* Set width for input */
+    text-align: center; /* Center text inside input */
+    padding: 5px;
+    margin-left: 10px; /* Space between input and buttons */
+}
+
+.controls button {
+    padding: 10px 15px; /* Adjust padding for buttons */
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-left: 10px; /* Space between buttons */
+    transition: background-color 0.3s ease;
+}
